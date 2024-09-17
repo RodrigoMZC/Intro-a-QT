@@ -41,14 +41,28 @@ int Matematicas::esPrimo(int num)
     return aux;
 }
 
-array<char, 32> Matematicas::descBinario(int num)
+QString Matematicas::descBinario(int num)
 {
-    array<char, 32> binario [];
-    for (int i = 0; i >= 0; i--) {
-        binario[i] (num & 1) ? '1' : '0';
+    QString bin = QString::number(num,2);
+    while (bin.length() < 16) {
+        bin.prepend('0');
     }
-    return binario;
+    return bin;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

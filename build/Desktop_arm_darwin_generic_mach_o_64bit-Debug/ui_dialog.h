@@ -16,6 +16,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -31,17 +32,22 @@ public:
     QPushButton *pushButEsPrimo;
     QPushButton *pushButAND;
     QPushButton *pushButOR;
-    QPushButton *pushButNor;
+    QPushButton *pushButNOR;
     QLabel *label_4;
     QLineEdit *lineNumero_2;
-    QPushButton *pushButAND_2;
-    QPushButton *pushButAND_3;
-    QPushButton *pushButAND_4;
+    QPushButton *pushButXOR;
+    QPushButton *pushButCoIz;
+    QPushButton *pushButCorDer;
+    QRadioButton *radioButDec;
+    QRadioButton *radioButBin;
     QFrame *frame_2;
     QLabel *label_3;
     QPushButton *pushButSalir;
     QLabel *labResult;
     QLabel *label_5;
+    QLabel *label_6;
+    QLabel *labBin1;
+    QLabel *labBin2;
 
     void setupUi(QDialog *Dialog)
     {
@@ -124,11 +130,11 @@ public:
 "font: 14pt \"Farah\";\n"
 "background-color: rgb(37, 44, 52);\n"
 ""));
-        pushButNor = new QPushButton(frame);
-        pushButNor->setObjectName("pushButNor");
-        pushButNor->setGeometry(QRect(178, 140, 80, 50));
-        pushButNor->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButNor->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
+        pushButNOR = new QPushButton(frame);
+        pushButNOR->setObjectName("pushButNOR");
+        pushButNOR->setGeometry(QRect(178, 140, 80, 50));
+        pushButNOR->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        pushButNOR->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
 "border-radius: 15px;\n"
 "font: 14pt \"Farah\";\n"
 "background-color: rgb(37, 44, 52);\n"
@@ -140,40 +146,51 @@ public:
 "font: 20pt \"Farah\";"));
         lineNumero_2 = new QLineEdit(frame);
         lineNumero_2->setObjectName("lineNumero_2");
-        lineNumero_2->setGeometry(QRect(5, 100, 245, 35));
+        lineNumero_2->setGeometry(QRect(5, 100, 255, 35));
         lineNumero_2->setLayoutDirection(Qt::LayoutDirection::RightToLeft);
         lineNumero_2->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
 "font: 22pt \"Andale Mono\";\n"
 "background-color: rgb(37, 44, 52);\n"
 "color: rgb(250, 250, 250);"));
         lineNumero_2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-        pushButAND_2 = new QPushButton(frame);
-        pushButAND_2->setObjectName("pushButAND_2");
-        pushButAND_2->setGeometry(QRect(5, 195, 80, 50));
-        pushButAND_2->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButAND_2->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
+        pushButXOR = new QPushButton(frame);
+        pushButXOR->setObjectName("pushButXOR");
+        pushButXOR->setGeometry(QRect(5, 195, 80, 50));
+        pushButXOR->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        pushButXOR->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
 "border-radius: 15px;\n"
 "font: 14pt \"Farah\";\n"
 "background-color: rgb(37, 44, 52);\n"
 ""));
-        pushButAND_3 = new QPushButton(frame);
-        pushButAND_3->setObjectName("pushButAND_3");
-        pushButAND_3->setGeometry(QRect(92, 195, 80, 50));
-        pushButAND_3->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButAND_3->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
+        pushButCoIz = new QPushButton(frame);
+        pushButCoIz->setObjectName("pushButCoIz");
+        pushButCoIz->setGeometry(QRect(92, 195, 80, 50));
+        pushButCoIz->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        pushButCoIz->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
 "border-radius: 15px;\n"
 "font: 14pt \"Farah\";\n"
 "background-color: rgb(37, 44, 52);\n"
 ""));
-        pushButAND_4 = new QPushButton(frame);
-        pushButAND_4->setObjectName("pushButAND_4");
-        pushButAND_4->setGeometry(QRect(178, 195, 80, 50));
-        pushButAND_4->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        pushButAND_4->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
+        pushButCorDer = new QPushButton(frame);
+        pushButCorDer->setObjectName("pushButCorDer");
+        pushButCorDer->setGeometry(QRect(178, 195, 80, 50));
+        pushButCorDer->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        pushButCorDer->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
 "border-radius: 15px;\n"
 "font: 14pt \"Farah\";\n"
 "background-color: rgb(37, 44, 52);\n"
 ""));
+        radioButDec = new QRadioButton(frame);
+        radioButDec->setObjectName("radioButDec");
+        radioButDec->setGeometry(QRect(120, 10, 41, 20));
+        radioButDec->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 18pt \"Andale Mono\";"));
+        radioButDec->setChecked(true);
+        radioButBin = new QRadioButton(frame);
+        radioButBin->setObjectName("radioButBin");
+        radioButBin->setGeometry(QRect(180, 10, 41, 20));
+        radioButBin->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 18pt \"Andale Mono\";"));
         frame_2 = new QFrame(Dialog);
         frame_2->setObjectName("frame_2");
         frame_2->setGeometry(QRect(280, 60, 265, 330));
@@ -189,7 +206,7 @@ public:
 "font: 20pt \"Farah\";"));
         pushButSalir = new QPushButton(frame_2);
         pushButSalir->setObjectName("pushButSalir");
-        pushButSalir->setGeometry(QRect(130, 280, 122, 30));
+        pushButSalir->setGeometry(QRect(135, 285, 122, 30));
         pushButSalir->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         pushButSalir->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
 "border-radius: 15px;\n"
@@ -206,9 +223,30 @@ public:
         labResult->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         label_5 = new QLabel(frame_2);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(20, 90, 101, 21));
+        label_5->setGeometry(QRect(20, 75, 191, 20));
         label_5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 20pt \"Farah\";"));
+        label_6 = new QLabel(frame_2);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(20, 140, 191, 20));
+        label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Farah\";"));
+        labBin1 = new QLabel(frame_2);
+        labBin1->setObjectName("labBin1");
+        labBin1->setGeometry(QRect(5, 100, 255, 35));
+        labBin1->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
+"font: 20pt \"Andale Mono\";\n"
+"background-color: rgb(37, 44, 52);\n"
+"color: rgb(250, 250, 250);"));
+        labBin1->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        labBin2 = new QLabel(frame_2);
+        labBin2->setObjectName("labBin2");
+        labBin2->setGeometry(QRect(5, 165, 255, 35));
+        labBin2->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
+"font: 20pt \"Andale Mono\";\n"
+"background-color: rgb(37, 44, 52);\n"
+"color: rgb(250, 250, 250);"));
+        labBin2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
         retranslateUi(Dialog);
 
@@ -225,15 +263,20 @@ public:
         pushButEsPrimo->setText(QCoreApplication::translate("Dialog", "Es Primo", nullptr));
         pushButAND->setText(QCoreApplication::translate("Dialog", "AND", nullptr));
         pushButOR->setText(QCoreApplication::translate("Dialog", "OR", nullptr));
-        pushButNor->setText(QCoreApplication::translate("Dialog", "NOR", nullptr));
+        pushButNOR->setText(QCoreApplication::translate("Dialog", "NOR", nullptr));
         label_4->setText(QCoreApplication::translate("Dialog", "Numero 2:", nullptr));
-        pushButAND_2->setText(QCoreApplication::translate("Dialog", "XOR", nullptr));
-        pushButAND_3->setText(QCoreApplication::translate("Dialog", "XOR", nullptr));
-        pushButAND_4->setText(QCoreApplication::translate("Dialog", "XOR", nullptr));
+        pushButXOR->setText(QCoreApplication::translate("Dialog", "XOR", nullptr));
+        pushButCoIz->setText(QCoreApplication::translate("Dialog", "<<", nullptr));
+        pushButCorDer->setText(QCoreApplication::translate("Dialog", ">>", nullptr));
+        radioButDec->setText(QCoreApplication::translate("Dialog", "10", nullptr));
+        radioButBin->setText(QCoreApplication::translate("Dialog", "2", nullptr));
         label_3->setText(QCoreApplication::translate("Dialog", "Respuesta:", nullptr));
         pushButSalir->setText(QCoreApplication::translate("Dialog", "Salir", nullptr));
         labResult->setText(QString());
-        label_5->setText(QCoreApplication::translate("Dialog", "Respuesta:", nullptr));
+        label_5->setText(QCoreApplication::translate("Dialog", "Binario numreo 1:", nullptr));
+        label_6->setText(QCoreApplication::translate("Dialog", "Binario numreo 2:", nullptr));
+        labBin1->setText(QString());
+        labBin2->setText(QString());
     } // retranslateUi
 
 };

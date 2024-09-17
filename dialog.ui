@@ -212,7 +212,7 @@ background-color: rgb(37, 44, 52);
      <string>OR</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButNor">
+   <widget class="QPushButton" name="pushButNOR">
     <property name="geometry">
      <rect>
       <x>178</x>
@@ -274,7 +274,7 @@ color: rgb(250, 250, 250);</string>
      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButAND_2">
+   <widget class="QPushButton" name="pushButXOR">
     <property name="geometry">
      <rect>
       <x>5</x>
@@ -297,7 +297,7 @@ background-color: rgb(37, 44, 52);
      <string>XOR</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButAND_3">
+   <widget class="QPushButton" name="pushButCoIz">
     <property name="geometry">
      <rect>
       <x>92</x>
@@ -317,10 +317,10 @@ background-color: rgb(37, 44, 52);
 </string>
     </property>
     <property name="text">
-     <string>XOR</string>
+     <string>&lt;&lt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButAND_4">
+   <widget class="QPushButton" name="pushButCorDer">
     <property name="geometry">
      <rect>
       <x>178</x>
@@ -340,7 +340,44 @@ background-color: rgb(37, 44, 52);
 </string>
     </property>
     <property name="text">
-     <string>XOR</string>
+     <string>&gt;&gt;</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButDec">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 18pt &quot;Andale Mono&quot;;</string>
+    </property>
+    <property name="text">
+     <string>10</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButBin">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 18pt &quot;Andale Mono&quot;;</string>
+    </property>
+    <property name="text">
+     <string>2</string>
     </property>
    </widget>
   </widget>
@@ -443,28 +480,6 @@ font: 20pt &quot;Farah&quot;;</string>
      <string>Binario numreo 1:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineBin1">
-    <property name="geometry">
-     <rect>
-      <x>5</x>
-      <y>100</y>
-      <width>255</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LayoutDirection::RightToLeft</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 15px;
-font: 22pt &quot;Andale Mono&quot;;
-background-color: rgb(37, 44, 52);
-color: rgb(250, 250, 250);</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
@@ -482,7 +497,29 @@ font: 20pt &quot;Farah&quot;;</string>
      <string>Binario numreo 2:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineBin2">
+   <widget class="QLabel" name="labBin1">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>100</y>
+      <width>255</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 20pt &quot;Andale Mono&quot;;
+background-color: rgb(37, 44, 52);
+color: rgb(250, 250, 250);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labBin2">
     <property name="geometry">
      <rect>
       <x>5</x>
@@ -491,14 +528,14 @@ font: 20pt &quot;Farah&quot;;</string>
       <height>35</height>
      </rect>
     </property>
-    <property name="layoutDirection">
-     <enum>Qt::LayoutDirection::RightToLeft</enum>
-    </property>
     <property name="styleSheet">
      <string notr="true">border-radius: 15px;
-font: 22pt &quot;Andale Mono&quot;;
+font: 20pt &quot;Andale Mono&quot;;
 background-color: rgb(37, 44, 52);
 color: rgb(250, 250, 250);</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
