@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>550</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(233, 233, 233);
+border-radius: 20px;
+color: rgb(0, 0, 0);
+font: 25pt &quot;Farah&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>Calculadora</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>60</y>
+     <width>265</width>
+     <height>330</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(233, 233, 233);
+border-radius: 20px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>95</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 20pt &quot;Farah&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Numero 1:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineNumero">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>35</y>
+      <width>255</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LayoutDirection::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 22pt &quot;Andale Mono&quot;;
+background-color: rgb(37, 44, 52);
+color: rgb(250, 250, 250);</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButFacIt">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>285</y>
+      <width>125</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>Factroria Iter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButFacRe">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>285</y>
+      <width>125</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>Factroria Rec</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButEsPrimo">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>250</y>
+      <width>255</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>Es Primo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButAND">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>140</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>AND</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButOR">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>140</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>OR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButNor">
+    <property name="geometry">
+     <rect>
+      <x>178</x>
+      <y>140</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>NOR</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>75</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 20pt &quot;Farah&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Numero 2:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineNumero_2">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>100</y>
+      <width>255</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LayoutDirection::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 22pt &quot;Andale Mono&quot;;
+background-color: rgb(37, 44, 52);
+color: rgb(250, 250, 250);</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButAND_2">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>195</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>XOR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButAND_3">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>195</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>XOR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButAND_4">
+    <property name="geometry">
+     <rect>
+      <x>178</x>
+      <y>195</y>
+      <width>80</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>XOR</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>60</y>
+     <width>265</width>
+     <height>330</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(233, 233, 233);
+border-radius: 20px;
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 20pt &quot;Farah&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Respuesta:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButSalir">
+    <property name="geometry">
+     <rect>
+      <x>135</x>
+      <y>285</y>
+      <width>122</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(233, 233, 233);
+border-radius: 15px;
+font: 14pt &quot;Farah&quot;;
+background-color: rgb(37, 44, 52);
+</string>
+    </property>
+    <property name="text">
+     <string>Salir</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labResult">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>35</y>
+      <width>255</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 22pt &quot;Andale Mono&quot;;
+background-color: rgb(37, 44, 52);
+color: rgb(250, 250, 250);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>75</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 20pt &quot;Farah&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Binario numreo 1:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineBin1">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>100</y>
+      <width>255</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LayoutDirection::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 22pt &quot;Andale Mono&quot;;
+background-color: rgb(37, 44, 52);
+color: rgb(250, 250, 250);</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 20pt &quot;Farah&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Binario numreo 2:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineBin2">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>165</y>
+      <width>255</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LayoutDirection::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 22pt &quot;Andale Mono&quot;;
+background-color: rgb(37, 44, 52);
+color: rgb(250, 250, 250);</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
