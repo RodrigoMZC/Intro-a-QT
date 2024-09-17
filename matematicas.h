@@ -13,6 +13,7 @@ public:
     static int esPrimo(int);
     static QString descBinario(int);
 
+
 };
 
 #endif // MATEMATICAS_H

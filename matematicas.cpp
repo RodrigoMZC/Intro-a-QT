@@ -44,7 +44,7 @@ int Matematicas::esPrimo(int num)
 QString Matematicas::descBinario(int num)
 {
     QString bin = QString::number(num,2);
-    while (bin.length() < 16) {
+    while (bin.length() < 32) {
         bin.prepend('0');
     }
     return bin;

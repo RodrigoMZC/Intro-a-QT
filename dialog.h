@@ -26,6 +26,14 @@ private slots:
 
     void on_pushButEsPrimo_clicked();
 
+    void on_pushButAND_clicked();
+
+    void on_pushButBorrar_clicked();
+
+    void on_pushButOR_clicked();
+
+    void on_pushButCoIz_clicked();
+
 private:
     Ui::Dialog *ui;
 };

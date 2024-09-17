@@ -16,7 +16,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QRadioButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -38,8 +37,6 @@ public:
     QPushButton *pushButXOR;
     QPushButton *pushButCoIz;
     QPushButton *pushButCorDer;
-    QRadioButton *radioButDec;
-    QRadioButton *radioButBin;
     QFrame *frame_2;
     QLabel *label_3;
     QPushButton *pushButSalir;
@@ -48,6 +45,9 @@ public:
     QLabel *label_6;
     QLabel *labBin1;
     QLabel *labBin2;
+    QLabel *label_7;
+    QLabel *labResulBin;
+    QPushButton *pushButBorrar;
 
     void setupUi(QDialog *Dialog)
     {
@@ -180,17 +180,6 @@ public:
 "font: 14pt \"Farah\";\n"
 "background-color: rgb(37, 44, 52);\n"
 ""));
-        radioButDec = new QRadioButton(frame);
-        radioButDec->setObjectName("radioButDec");
-        radioButDec->setGeometry(QRect(120, 10, 41, 20));
-        radioButDec->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 18pt \"Andale Mono\";"));
-        radioButDec->setChecked(true);
-        radioButBin = new QRadioButton(frame);
-        radioButBin->setObjectName("radioButBin");
-        radioButBin->setGeometry(QRect(180, 10, 41, 20));
-        radioButBin->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 18pt \"Andale Mono\";"));
         frame_2 = new QFrame(Dialog);
         frame_2->setObjectName("frame_2");
         frame_2->setGeometry(QRect(280, 60, 265, 330));
@@ -223,30 +212,52 @@ public:
         labResult->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         label_5 = new QLabel(frame_2);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(20, 75, 191, 20));
+        label_5->setGeometry(QRect(20, 140, 191, 20));
         label_5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 20pt \"Farah\";"));
         label_6 = new QLabel(frame_2);
         label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(20, 140, 191, 20));
+        label_6->setGeometry(QRect(20, 205, 191, 20));
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 20pt \"Farah\";"));
         labBin1 = new QLabel(frame_2);
         labBin1->setObjectName("labBin1");
-        labBin1->setGeometry(QRect(5, 100, 255, 35));
+        labBin1->setGeometry(QRect(5, 165, 255, 35));
         labBin1->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
-"font: 20pt \"Andale Mono\";\n"
+"font: 13pt \"Andale Mono\";\n"
 "background-color: rgb(37, 44, 52);\n"
 "color: rgb(250, 250, 250);"));
         labBin1->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
         labBin2 = new QLabel(frame_2);
         labBin2->setObjectName("labBin2");
-        labBin2->setGeometry(QRect(5, 165, 255, 35));
+        labBin2->setGeometry(QRect(5, 230, 255, 35));
         labBin2->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
-"font: 20pt \"Andale Mono\";\n"
+"font: 13pt \"Andale Mono\";\n"
 "background-color: rgb(37, 44, 52);\n"
 "color: rgb(250, 250, 250);"));
         labBin2->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        label_7 = new QLabel(frame_2);
+        label_7->setObjectName("label_7");
+        label_7->setGeometry(QRect(20, 75, 191, 20));
+        label_7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Farah\";"));
+        labResulBin = new QLabel(frame_2);
+        labResulBin->setObjectName("labResulBin");
+        labResulBin->setGeometry(QRect(5, 100, 255, 35));
+        labResulBin->setStyleSheet(QString::fromUtf8("border-radius: 15px;\n"
+"font: 13pt \"Andale Mono\";\n"
+"background-color: rgb(37, 44, 52);\n"
+"color: rgb(250, 250, 250);"));
+        labResulBin->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        pushButBorrar = new QPushButton(frame_2);
+        pushButBorrar->setObjectName("pushButBorrar");
+        pushButBorrar->setGeometry(QRect(5, 285, 122, 30));
+        pushButBorrar->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        pushButBorrar->setStyleSheet(QString::fromUtf8("color: rgb(233, 233, 233);\n"
+"border-radius: 15px;\n"
+"font: 14pt \"Farah\";\n"
+"background-color: rgb(37, 44, 52);\n"
+""));
 
         retranslateUi(Dialog);
 
@@ -258,18 +269,37 @@ public:
         Dialog->setWindowTitle(QCoreApplication::translate("Dialog", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("Dialog", "Calculadora", nullptr));
         label_2->setText(QCoreApplication::translate("Dialog", "Numero 1:", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButFacIt->setToolTip(QCoreApplication::translate("Dialog", "Solo Tomara el Numero 1", nullptr));
+#endif // QT_CONFIG(tooltip)
         pushButFacIt->setText(QCoreApplication::translate("Dialog", "Factroria Iter", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButFacRe->setToolTip(QCoreApplication::translate("Dialog", "Solo Tomara el Numero 1", nullptr));
+#endif // QT_CONFIG(tooltip)
         pushButFacRe->setText(QCoreApplication::translate("Dialog", "Factroria Rec", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButEsPrimo->setToolTip(QCoreApplication::translate("Dialog", "Solo tomara el Numero 1", nullptr));
+#endif // QT_CONFIG(tooltip)
         pushButEsPrimo->setText(QCoreApplication::translate("Dialog", "Es Primo", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButAND->setToolTip(QCoreApplication::translate("Dialog", "<html><head/><body><p>Asegurate de escribir los dos nimeros antes de continuar</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
         pushButAND->setText(QCoreApplication::translate("Dialog", "AND", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButOR->setToolTip(QCoreApplication::translate("Dialog", "<html><head/><body><p>Asegurate de escribir los dos nimeros antes de continuar</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
         pushButOR->setText(QCoreApplication::translate("Dialog", "OR", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButNOR->setToolTip(QCoreApplication::translate("Dialog", "<html><head/><body><p>Asegurate de escribir los dos nimeros antes de continuar</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
         pushButNOR->setText(QCoreApplication::translate("Dialog", "NOR", nullptr));
         label_4->setText(QCoreApplication::translate("Dialog", "Numero 2:", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButXOR->setToolTip(QCoreApplication::translate("Dialog", "<html><head/><body><p>Asegurate de escribir los dos nimeros antes de continuar</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
         pushButXOR->setText(QCoreApplication::translate("Dialog", "XOR", nullptr));
         pushButCoIz->setText(QCoreApplication::translate("Dialog", "<<", nullptr));
         pushButCorDer->setText(QCoreApplication::translate("Dialog", ">>", nullptr));
-        radioButDec->setText(QCoreApplication::translate("Dialog", "10", nullptr));
-        radioButBin->setText(QCoreApplication::translate("Dialog", "2", nullptr));
         label_3->setText(QCoreApplication::translate("Dialog", "Respuesta:", nullptr));
         pushButSalir->setText(QCoreApplication::translate("Dialog", "Salir", nullptr));
         labResult->setText(QString());
@@ -277,6 +307,9 @@ public:
         label_6->setText(QCoreApplication::translate("Dialog", "Binario numreo 2:", nullptr));
         labBin1->setText(QString());
         labBin2->setText(QString());
+        label_7->setText(QCoreApplication::translate("Dialog", "Binario Respuesta:", nullptr));
+        labResulBin->setText(QString());
+        pushButBorrar->setText(QCoreApplication::translate("Dialog", "Borrar", nullptr));
     } // retranslateUi
 
 };
